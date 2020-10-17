@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cab Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cab Booking</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="min-height: 500px">
+
+    <div class="starter-template">
+        <h1>Book a cab</h1>
+
+        <div id="response" class="form-group"></div>
+
+        <form class="form-horizontal" id="booking-form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" required class="form-control" id="name"/>
+                </div>
+            </div>
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Latitude</label>
+                <div class="col-sm-10">
+                    <input type="number" step="any" required class="form-control" id="latitude"/>
+                </div>
+            </div>
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Longitude</label>
+                <div class="col-sm-10">
+                    <input type="number" step="any" required class="form-control" id="longitude"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="btn-submit"
+                            class="btn btn-primary btn-lg">Submit
+                    </button>
+                    <button type="submit" id="btn-list-drivers"
+                            class="btn btn-primary btn-lg">List Drivers
+                    </button>
+                </div>
+            </div>
+            <div id="response-list" class="row col-md-7 table-responsive"></div>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+</div>
+
+<script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/booking.js"></script>
+
+</body>
+</html>
